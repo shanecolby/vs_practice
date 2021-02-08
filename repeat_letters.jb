@@ -1,17 +1,36 @@
-word = "mississippi"
-letter_frequency = {}
-index = 0
+# word = "mississippi"
+# letter_frequency = {}
+# index = 0
 
-while index < word.length
-  letter = word[index]
-  if letter_frequency[letter] == nil
-    letter_frequency[letter] = 0
+# while index < word.length
+#   letter = word[index]
+#   if letter_frequency[letter] == nil
+#     letter_frequency[letter] = 0
+#   end
+#   letter_frequency[letter] += 1
+#   index += 1
+# end
+# p letter_frequency
+
+# p letter_frequency
+
+# p letter_frequency
+
+
+# return the greatest values from the array
+# array = [5,17,-4,20,12]
+
+def greatestNumber(array)
+  index = 0
+  number = array[index]
+
+  while index < array.length
+    if array[index] > number
+      number = array[index]
+    end
+    index += 1
   end
-  letter_frequency[letter] += 1
-  index += 1
+  return number
+
 end
-p letter_frequency
-
-p letter_frequency
-
-p letter_frequency
+p greatestNumber([5,17,-4,20,12])
