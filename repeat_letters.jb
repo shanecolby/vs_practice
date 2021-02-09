@@ -20,40 +20,39 @@
 # return the greatest values from the array
 # array = [5,17,-4,20,12]
 
-# def greatestNumber(array)
-#   index = 0
-#   number = array[index]
+def greatestValue(array)
+  index = 0
+  number = array[index]
+  while index < array.length
+    if array[index] > number
+      number = array[index]
+    end
+    index += 1
+  end
+  return number
 
-#   while index < array.length
-#     if array[index] > number
-#       number = array[index]
-#     end
-#     index += 1
-#   end
-#   return number
-
-# end
-# p greatestNumber([5,17,-4,20,12])
+end
+p greatestValue([5,17,-4,20,12])
 
 # find the duplicate values
 # array = [5,2,9,7,2,6]
 
-def pairedNumbers(array)
+def duplicateNumbers(array)
   index = 0
   number = array[index]
   while index < array.length
     sub_index = index + 1
     while sub_index < array.length
       if array[index] == array[sub_index]
-        number = array[sub_index];
+        number = array[sub_index]
       end
       sub_index += 1
     end
     index += 1
   end
   return number
-
+  
 
 
 end
-p pairedNumbers([5,2,9,7,2,6])
+p duplicateNumbers([5,2,9,7,2,6])
