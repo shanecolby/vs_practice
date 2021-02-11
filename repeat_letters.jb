@@ -37,7 +37,7 @@ p greatestValue([5,17,-4,20,12])
 # find the duplicate values
 # array = [5,2,9,7,2,6]
 
-def duplicateNumbers(array)
+def cuplicateNumber(array)
   index = 0
   number = array[index]
   while index < array.length
@@ -51,8 +51,28 @@ def duplicateNumbers(array)
     index += 1
   end
   return number
+
+end
+p cuplicateNumber([5,2,9,4,5,6,2])
+
+
+
+# def duplicateNumbers(array)
+#   index = 0
+#   number = array[index]
+#   while index < array.length
+#     sub_index = index + 1
+#     while sub_index < array.length
+#       if array[index] == array[sub_index]
+#         number = array[sub_index]
+#       end
+#       sub_index += 1
+#     end
+#     index += 1
+#   end
+#   return number
   
 
 
-end
-p duplicateNumbers([5,2,9,7,2,6])
+# end
+# p duplicateNumbers([5,2,9,7,2,6])
