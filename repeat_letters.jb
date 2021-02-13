@@ -20,22 +20,25 @@
 # return the greatest values from the array
 # array = [5,17,-4,20,12]
 
-def greatestValue(array)
-  index = 0
-  number = array[index]
-  while index < array.length
-    if array[index] > number
-      number = array[index]
-    end
-    index += 1
-  end
-  return number
 
-end
-p greatestValue([5,17,-4,20,12])
+
+# def greatestValue(array)
+#   index = 0
+#   number = array[index]
+#   while index < array.length
+#     if array[index] > number
+#       number = array[index]
+#     end
+#     index += 1
+#   end
+#   return number
+
+# end
+# p greatestValue([5,17,-4,20,12])
 
 # find the duplicate values
 # array = [5,2,9,7,2,6]
+
 
 def cuplicateNumber(array)
   index = 0
