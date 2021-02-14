@@ -11,8 +11,6 @@ while index < word.length
   index += 1
 end
 p letter_frequency
-
-
 # while index < word.length
 #   letter = word[index]
 #   if letter_frequency[letter] == nil
@@ -33,14 +31,14 @@ p letter_frequency
 
 def greatest(array)
   index = 0
-  greatestnumber = array[index]
+  number = array[index]
   while index < array.length
-    if array[index] > greatestnumber
-      greatestnumber = array[index]
+    if array[index] > number
+      number = array[index]
     end
     index += 1
   end
-  return greatestnumber
+  return number
 end
 p greatest([10,2,3,4,5])
 
