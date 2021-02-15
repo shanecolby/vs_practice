@@ -1,4 +1,5 @@
 # print out everyother element in the array [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+
 def everyother(array)
   index = 0
   new_array = []
@@ -7,8 +8,10 @@ def everyother(array)
     index += 2
   end
   return new_array
+
 end
 p everyother([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
+
 
 
 
@@ -31,11 +34,12 @@ def reverse(array)
   index = 0
   while index < array.length
     array[index]
-     index += 1
+    index += 1
   end
   return array.reverse
 end
-p reverse([1,2,3])
+p reverse([1,2,3,4,5])
+
 
 
 # def reverse(array)
@@ -58,9 +62,11 @@ def product(array)
     product = product * array[index]
     index += 1
   end
-  return product  
+  return product
 end
 p product([1,2,3])
+
+
 
 
 
@@ -83,9 +89,9 @@ def double(array)
   while index < array.length
     p array[index] * 2
     index += 1
-  end 
+  end
 end
-p double([1,2,3])
+p double([1,2,3,4])
 
 
 
@@ -104,18 +110,18 @@ p double([1,2,3])
 # make new array of all numbers less than 10 [2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1]
 
 def lessthan10(array)
-index = 0
-new_array = []
-while index < array.length
-  if array[index] < 10
-    new_array << array[index]
+  index = 0
+  new_array = []
+  while index < array.length
+    if array[index] < 10
+      new_array << array[index]
+    end
+    index += 1
   end
-  index += 1
+  return new_array
 end
-return new_array
+p lessthan10([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
-end
-p lessthan10([6,10,13,5,17,8,19,13,1])
 
 
 
@@ -137,15 +143,15 @@ p lessthan10([6,10,13,5,17,8,19,13,1])
 
 def sum(array)
   index = 1
-  sum = array[0]
+  sum  = array[0]
   while index < array.length
     sum = sum + array[index]
     index += 1
   end
   return sum
-
 end
 p sum([1,2,3])
+
 
 
 
@@ -172,7 +178,7 @@ def flip(hash)
   hash.each do |key,value|
     new_hash[value] = key
   end
-  return new_hash   
+  return new_hash
 
 end
 p flip({"a" => 1, "b" => 2, "c" => 3})
@@ -196,14 +202,15 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 
 # conver hash into an array {"chair" => 100, "book" => 14}
 
-def items(hash)
+def toarray(hash)
   new_array = []
   hash.each do |name,price|
-    new_array << [name,price]
+    new_array << [name, price]
   end
   return new_array
 end
-p items({"chair" => 100, "book" => 14})
+p toarray({"chair" => 100, "book" => 14})
+
 
 
 
