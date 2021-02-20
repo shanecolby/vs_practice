@@ -34,6 +34,22 @@ p letter_frequency
 
 # return the greatest values from the array
 # array = [5,17,-4,20,12]
+def greatest(array)
+  index = 0
+  number = array[index]
+  while index < array.length
+    if array[index] > number
+      number = array[index]
+    end
+    index += 1
+  end
+  return number
+end
+p greatest([8,9,4,3,2,10,65,87,99,104,32,67,87])
+
+
+
+
 
 def greatestValue(array)
   index = 0
@@ -84,6 +100,25 @@ def doublenumber(array)
 
 end
 p doublenumber([5,2,9,7,2,6])
+
+
+def doublenumbers(array)
+  index = 0
+  number = array[index]
+  while index < array.length
+    sub_index =  index + 1 
+    while sub_index < array.length
+      if array[index] == array[sub_index]
+        number = array[sub_index]
+      end
+      sub_index += 1
+    end
+    index += 1
+  end
+  return number  
+end
+
+p doublenumbers([1,2,3,4,5,6,7,8,9,1])
 
 
 
