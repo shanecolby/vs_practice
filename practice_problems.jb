@@ -183,7 +183,7 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 def hash_to_array(hash)
   array = []
   hash.each do |name,price|
-    array << [name,price]
+    array  [name,price]
   end
   return array
 end
