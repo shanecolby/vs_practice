@@ -1,5 +1,8 @@
 # 1. Write a while loop to print the numbers 1 through 10.
 
+
+
+
 # x = 1
 # while x <= 10
 #   p x
@@ -9,12 +12,26 @@
 
 # 2. Write a while loop that prints the word "hello" 5 times.
 
+# word = "hello"
+# index = 0
+# while index < 5
+#   p word
+#   index += 1
+# end
+
+
+
 # 5.times do
 #   p "hello"
 # end
 
 
 # 3. Write a while loop that asks the user to enter a word and will run forever until the user enters the word "stop".
+
+
+
+
+
 
 # while true
 #   p "enter a word"
@@ -28,6 +45,10 @@
 
 # 4. Write a while loop that prints the numbers 0 through 100, increasing by 5 each time.
 
+
+
+
+
 # x = 0
 # while x <= 100
 #   p x
@@ -36,6 +57,7 @@
 
 
 # 5. Write a while loop that prints the number 9000 ten times.
+
 
 # index = 0
 # x = 9000
@@ -46,6 +68,8 @@
 
 
 # 6. Write a while loop that asks the user to enter a number and will run forever until the user enters a number greater than 10.
+
+
 
 # while true
 #   p "enter a number: "
@@ -58,6 +82,7 @@
 
 # 7. Write a while loop that prints the numbers 50 to 70.
 
+
 # x = 50
 # while x <= 70
 #   p x
@@ -67,12 +92,22 @@
 
 # 8. Write a while loop that prints the phrase "Around the world" 144 times.
 
+# word = "Around the world"
+# index = 0
+# while index < 144
+#   p word
+#   index += 1
+# end
+
+
 # 144.times do
 #   p "around the world"
 # end
 
 
 # 9. Write a while loop that asks the user to enter a word and will run forever until the user enters a word with more than 5 letters.
+
+
 
 # while true
 #   p "Enter a word: "
@@ -85,6 +120,8 @@
 
 
 # 10. Write a while loop that prints the even numbers from 2 to 40.
+
+
 
 # x = 2
 # while x <= 40
@@ -101,6 +138,21 @@
 #  1. Start with an array of numbers and create a new array with each number times 3.
 #     For example, [1, 2, 3] becomes [3, 6, 9].
 
+
+
+# def array(array)
+#   index = 0
+#   new_array = []
+#   while index < array.length
+#     new_array << array[index] * 3
+#     index += 1
+#   end
+#   return new_array
+# end
+# p array([1,2,3])
+
+
+
 # def times3(array)
 #   index = 0
 #   while index < array.length
@@ -114,6 +166,25 @@
 
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+
+# def upcase(array)
+#   index = 0
+#   new_array = []
+#   while index < array.length
+#     new_array << array[index].upcase
+#     index += 1
+#   end
+#   return new_array
+
+# end
+# p upcase(["hello", "goodbye"])
+
+
+
+
+
+
 
 # def upcased(array)
 #   index = 0
@@ -130,6 +201,10 @@
 #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
+
+
+
+
   # array = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
   # new_array = []
   # array.each do |person|
@@ -143,6 +218,21 @@
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
+# def plus7(array)
+#   index = 0
+#   new_array = []
+#   while index < array.length
+#     new_array << array[index] + 7
+#     index += 1
+#   end
+#   return new_array
+
+# end
+# p plus7([1,2,3])
+
+
+
+
 # numbers = [1,2,3]
 # new_array = []
 # numbers.each do |number|
@@ -152,6 +242,19 @@
 
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+# def strings(array)
+#   new_array = []
+#   array.each do |word|
+#     new_array << word.length
+#   end
+#   return new_array
+# end
+# p strings(["hello", "goodbye"])
+
+
+
+
 
 # strings = ["hello", "goodbye"]
 # new_array = []
@@ -166,6 +269,10 @@
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
+
+
+
+
 # hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
 # new_array = []
 # hashes.each do |person|
@@ -177,6 +284,21 @@
 
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+
+# def divide(array)
+#   new_array = []
+#   array.each do |number|
+#     new_array << number / 2.0
+#   end
+#   return new_array
+# end
+# p divide([1,2,3])
+
+
+
+
+
 
 # numbers = [1,2,3]
 # new_array = []
@@ -190,6 +312,19 @@
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
+# def firstletter(array)
+#   new_array = []
+#   array.each do |word|
+#     new_array << word[0]
+#   end
+#   return new_array
+# end
+# p firstletter(["hello", "goodbye"])
+
+
+
+
+
 # strings = ["hello", "goodbye"]
 # new_array = []
 # strings.each do |string|
@@ -201,6 +336,19 @@
 
 # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+
+# def array(array)
+#   new_array = []
+#   array.each do |person|
+#     new_array << person[:age] * 2
+#   end
+#   return new_array
+
+# end
+# p array([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
+
+
+
 
 # hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
 # new_array = []
@@ -214,12 +362,25 @@
 # 10. Start with an array of numbers and create a new array with each number converted into a string.
 #     For example, [1, 2, 3] becomes ["1", "2", "3"].
 
+# def toString(array)
+#   new_array = []
+#   array.each do |number|
+#     new_array << number.to_s
+#   end
+#   return new_array
+
+# end
+# p toString([1,2,3])
+
+
+
+
+
+
 # numbers = [1,2,3]
 # new_array = []
 # numbers.each do |number|
 #   new_array << number.to_s
 # end
 # p new_array
-
-
 
