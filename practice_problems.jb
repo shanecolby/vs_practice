@@ -72,6 +72,15 @@ p product([1,2,3])
 
 #double the elements in a given array [2,4,6,8,10]
 
+def arrayDouble(array)
+  new_array = []
+  array.each do |number|
+    new_array << number * 2
+  end
+  return new_array
+end
+p arrayDouble([5,10,15])
+
 
 
 
@@ -183,7 +192,7 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 def hash_to_array(hash)
   array = []
   hash.each do |name,price|
-    array  [name,price]
+    array << [name,price]
   end
   return array
 end
