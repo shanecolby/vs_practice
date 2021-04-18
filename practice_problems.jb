@@ -54,6 +54,23 @@ def product(array)
     index += 1
   end
   return product
+
+
+end
+p product([5,5,5])
+
+
+
+
+
+def product(array)
+  index = 0
+  product = array[index]
+  while index < array.length
+    product = product * array[index]
+    index += 1
+  end
+  return product
 end
 p product([1,2,3])
 
@@ -72,14 +89,19 @@ p product([1,2,3])
 
 #double the elements in a given array [2,4,6,8,10]
 
-def arrayDouble(array)
-  new_array = []
-  array.each do |number|
-    new_array << number * 2
-  end
-  return new_array
-end
-p arrayDouble([5,10,15])
+
+
+
+
+
+# def arrayDouble(array)
+#   new_array = []
+#   array.each do |number|
+#     new_array << number * 2
+#   end
+#   return new_array
+# end
+# p arrayDouble([5,10,15])
 
 
 
