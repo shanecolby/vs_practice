@@ -1,15 +1,20 @@
 # print out everyother element in the array [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
-def everyother(array)
-  index = 0
-  new_array = []
-  while index < array.length
-    new_array << array[index]
-    index += 2
-  end
-  return new_array
-end
-p everyother([1,2,3,4,5])
+
+
+
+
+
+# def everyother(array)
+#   index = 0
+#   new_array = []
+#   while index < array.length
+#     new_array << array[index]
+#     index += 2
+#   end
+#   return new_array
+# end
+# p everyother([1,2,3,4,5])
 
 
 
@@ -46,33 +51,33 @@ p everyother([1,2,3,4,5])
 
 # find the product of the array [1,2,3,4]
 
-def product(array)
-  index = 0
-  product = array[index]
-  while index < array.length
-    product = product * array[index]
-    index += 1
-  end
-  return product
+# def product(array)
+#   index = 0
+#   product = array[index]
+#   while index < array.length
+#     product = product * array[index]
+#     index += 1
+#   end
+#   return product
 
 
-end
-p product([5,5,5])
+# end
+# p product([5,5,5])
 
 
 
 
 
-def product(array)
-  index = 0
-  product = array[index]
-  while index < array.length
-    product = product * array[index]
-    index += 1
-  end
-  return product
-end
-p product([1,2,3])
+# def product(array)
+#   index = 0
+#   product = array[index]
+#   while index < array.length
+#     product = product * array[index]
+#     index += 1
+#   end
+#   return product
+# end
+# p product([1,2,3])
 
 
 
@@ -109,29 +114,29 @@ p product([1,2,3])
 
 
 
-def double(array)
-  index = 0
-  while index < array.length
-    p array[index] * 2
-    index += 1  
-  end
-end
-p double([2,4,6,8,10])
+# def double(array)
+#   index = 0
+#   while index < array.length
+#     p array[index] * 2
+#     index += 1  
+#   end
+# end
+# p double([2,4,6,8,10])
 
 # make new array of all numbers less than 10 [2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1]
 
-def greater_than_24(array)
-  index = 0
-  new_array = []
-  while index < array.length
-    if array[index] > 24
-      new_array << array[index]
-    end
-    index += 1
-  end
-  return new_array
-end
-p greater_than_24([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
+# def greater_than_24(array)
+#   index = 0
+#   new_array = []
+#   while index < array.length
+#     if array[index] > 24
+#       new_array << array[index]
+#     end
+#     index += 1
+#   end
+#   return new_array
+# end
+# p greater_than_24([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
 
 
@@ -149,16 +154,16 @@ p greater_than_24([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 # p lessthan100([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
 # find the sum of the arry [1,2,3]
-def sum(array)
-index = 1
-sum = array[0]
-while index < array.length
-  sum = sum + array[index]
-  index += 1
-end
-return sum
-end
-p sum([5,10,15])
+# def sum(array)
+# index = 1
+# sum = array[0]
+# while index < array.length
+#   sum = sum + array[index]
+#   index += 1
+# end
+# return sum
+# end
+# p sum([5,10,15])
  
 
 
@@ -183,15 +188,15 @@ p sum([5,10,15])
 
 # flip the key and value of this hash {"a" => 1, "b" => 2, "c" => 3}
 
-def flip(hash)
-  flipped = {}
-  hash.each do |key,value|
-    flipped[value] = key
-  end
-  return flipped
+# def flip(hash)
+#   flipped = {}
+#   hash.each do |key,value|
+#     flipped[value] = key
+#   end
+#   return flipped
 
-end
-p flip({"a" => 1, "b" => 2, "c" => 3})
+# end
+# p flip({"a" => 1, "b" => 2, "c" => 3})
 
 
 
@@ -210,16 +215,6 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 # p flip({"a" => 1, "b" => 2, "c" => 3})
 
 # conver hash into an array {"chair" => 100, "book" => 14}
-
-def hash_to_array(hash)
-  array = []
-  hash.each do |name,price|
-    array << [name,price]
-  end
-  return array
-end
-p hash_to_array({"chair" => 100, "book" => 14})
-
 
 
 # def hashToArray(hash)
