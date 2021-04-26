@@ -1,6 +1,15 @@
 # print out everyother element in the array [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
+# def everyOther(array)
+#   index = 0
+#   while index < array.length
+#     p array[index]
+#     index += 2
+#   end
 
+
+# end
+# p everyOther([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 
 
 
@@ -37,7 +46,6 @@
 
 
 
-
 # def reverse(array)
 #   index = 0
 #   while index < array.length
@@ -50,6 +58,8 @@
 # p reverse([1,2,3,4,5])
 
 # find the product of the array [1,2,3,4]
+
+
 
 # def product(array)
 #   index = 0
@@ -114,6 +124,7 @@
 
 
 
+
 # def double(array)
 #   index = 0
 #   while index < array.length
@@ -124,6 +135,21 @@
 # p double([2,4,6,8,10])
 
 # make new array of all numbers less than 10 [2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1]
+
+def lessThan10(array)
+  index = 0
+  new_array = []
+  while index < array.length
+    if array[index] < 10
+      new_array << array[index]
+    end
+    index += 1
+  end
+  return new_array
+
+
+end
+p lessThan10([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
 # def greater_than_24(array)
 #   index = 0

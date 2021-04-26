@@ -1,16 +1,16 @@
-word = "mississippi"
-letter_frequency = {}
-index = 0
+# word = "mississippi"
+# letter_frequency = {}
+# index = 0
 
-while index < word.length
-  letter = word[index]
-  if letter_frequency[letter] == nil
-    letter_frequency[letter] = 0
-  end
-  letter_frequency[letter] += 1
-  index += 1
-end
-p letter_frequency
+# while index < word.length
+#   letter = word[index]
+#   if letter_frequency[letter] == nil
+#     letter_frequency[letter] = 0
+#   end
+#   letter_frequency[letter] += 1
+#   index += 1
+# end
+# p letter_frequency
 
 
 
@@ -34,35 +34,43 @@ p letter_frequency
 
 # return the greatest values from the array
 # array = [5,17,-4,20,12]
-def greatest(array)
-  index = 0
-  number = array[index]
-  while index < array.length
-    if array[index] > number
-      number = array[index]
-    end
-    index += 1
-  end
-  return number
-end
-p greatest([8,9,4,3,2,10,65,87,99,104,32,67,87])
 
 
 
 
 
-def greatestValue(array)
-  index = 0
-  highestnumber = array[index]
-  while index < array.length
-    if array[index] > highestnumber
-      highestnumber = array[index]
-    end
-    index += 1
-  end
-  return highestnumber
-end
-p greatestValue([5,17,-4,20,12])
+
+
+
+# def greatest(array)
+#   index = 0
+#   number = array[index]
+#   while index < array.length
+#     if array[index] > number
+#       number = array[index]
+#     end
+#     index += 1
+#   end
+#   return number
+# end
+# p greatest([8,9,4,3,2,10,65,87,99,104,32,67,87])
+
+
+
+
+
+# def greatestValue(array)
+#   index = 0
+#   highestnumber = array[index]
+#   while index < array.length
+#     if array[index] > highestnumber
+#       highestnumber = array[index]
+#     end
+#     index += 1
+#   end
+#   return highestnumber
+# end
+# p greatestValue([5,17,-4,20,12])
 
 
 
@@ -83,42 +91,42 @@ p greatestValue([5,17,-4,20,12])
 # find the duplicate values
 # array = [5,2,9,7,2,6]
 
-def doublenumber(array)
-  index = 0
-  duplicate_number = array[index]
-  while index < array.length
-    sub_index = index + 1
-    while sub_index < array.length
-      if array[index] == array[sub_index]
-        duplicate_number = array[sub_index]
-      end
-      sub_index += 1
-    end
-    index += 1
-  end
-  return duplicate_number
+# def doublenumber(array)
+#   index = 0
+#   duplicate_number = array[index]
+#   while index < array.length
+#     sub_index = index + 1
+#     while sub_index < array.length
+#       if array[index] == array[sub_index]
+#         duplicate_number = array[sub_index]
+#       end
+#       sub_index += 1
+#     end
+#     index += 1
+#   end
+#   return duplicate_number
 
-end
-p doublenumber([5,2,9,7,2,6])
+# end
+# p doublenumber([5,2,9,7,2,6])
 
 
-def doublenumbers(array)
-  index = 0
-  number = array[index]
-  while index < array.length
-    sub_index =  index + 1 
-    while sub_index < array.length
-      if array[index] == array[sub_index]
-        number = array[sub_index]
-      end
-      sub_index += 1
-    end
-    index += 1
-  end
-  return number  
-end
+# def doublenumbers(array)
+#   index = 0
+#   number = array[index]
+#   while index < array.length
+#     sub_index =  index + 1 
+#     while sub_index < array.length
+#       if array[index] == array[sub_index]
+#         number = array[sub_index]
+#       end
+#       sub_index += 1
+#     end
+#     index += 1
+#   end
+#   return number  
+# end
 
-p doublenumbers([1,2,3,4,5,6,7,8,9,1])
+# p doublenumbers([1,2,3,4,5,6,7,8,9,1])
 
 
 
@@ -144,3 +152,24 @@ p doublenumbers([1,2,3,4,5,6,7,8,9,1])
 
 # end
 # p duplicateNumbers([5,2,9,7,2,6])
+
+
+# def doubleNumber(array)
+#   index = 0
+#   number = array[index]
+#   while index < array.length
+#     sub_index = index + 1
+#     while sub_index < array.length
+#       if array[index] == array[sub_index]
+#         number = array[sub_index]
+#       end
+#       sub_index += 1
+#     end
+#     index += 1
+#   end
+#   return number
+
+
+
+# end
+# p doubleNumber([1,2,3,4,5,6,7,9,10,3])
