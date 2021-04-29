@@ -275,17 +275,17 @@
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
 
-def add(array)
-  new_array=[]
-  array.each do |number|
-    new_array << number + 7
-  end
-  return new_array
+# def add(array)
+#   new_array=[]
+#   array.each do |number|
+#     new_array << number + 7
+#   end
+#   return new_array
     
 
 
-end
-p add([1,2,3])
+# end
+# p add([1,2,3])
 
 
 
@@ -395,27 +395,27 @@ p add([1,2,3])
 
 
 
-def divide(array)
- new_array=[]
-  array.each do |number|
-    new_array << number / 2
-  end
-  return new_array
+# def divide(array)
+#  new_array=[]
+#   array.each do |number|
+#     new_array << number / 2
+#   end
+#   return new_array
 
-end
-p divide([1,2,3])
+# end
+# p divide([1,2,3])
 
-def divide(array)
-  index = 0
-  new_array = []
-  while index < array.length
-    new_array << array[index] / 2.0
-    index += 1
-  end
-  return new_array
+# def divide(array)
+#   index = 0
+#   new_array = []
+#   while index < array.length
+#     new_array << array[index] / 2.0
+#     index += 1
+#   end
+#   return new_array
 
-end
-p divide([2,4,6])
+# end
+# p divide([2,4,6])
 
 # def divide(array)
 #   new_array = []
