@@ -14,6 +14,7 @@
 
 
 
+
 # def everyother(array)
 #   index = 0
 #   new_array = []
@@ -59,6 +60,17 @@
 
 # find the product of the array [1,2,3,4]
 
+def product(array)
+  index = 0
+  product = array[index]
+  while index < array.length
+    product = product * array[index]
+    index += 1
+  end
+  return product
+
+end
+p product([1,2,3])
 
 
 # def product(array)
@@ -254,14 +266,14 @@
 
 # conver hash into an array {"chair" => 100, "book" => 14}
 
-def convert(hash)
-  new_array = []
-  hash.each do |name,price|
-    new_array << [name,price]
-  end
-  return new_array
-end
-p convert({"chair" => 100, "book" => 14})
+# def convert(hash)
+#   new_array = []
+#   hash.each do |name,price|
+#     new_array << [name,price]
+#   end
+#   return new_array
+# end
+# p convert({"chair" => 100, "book" => 14})
 
 # def hashToArray(hash)
 #   array = []
