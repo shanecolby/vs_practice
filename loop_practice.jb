@@ -395,6 +395,16 @@ p string(["hello", "goodbye"])
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
+def age(array)
+  new_array = []
+  array.each do |person|
+    new_array << person[:age]
+  end
+  return new_array
+
+end
+p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
+
 
 # def age(array)
 #   new_array = []
