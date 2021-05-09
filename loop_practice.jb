@@ -496,6 +496,16 @@ p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
+def strings(array)
+  new_array =  []
+  array.each do |word|
+    new_array << word[0]
+  end
+  return new_array
+
+end
+p strings(["hello", "goodbye"])
+
 
 
 # def firstletter(array)
@@ -536,6 +546,16 @@ p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
+def agedoubled(array)
+  new_array = []
+  array.each do |person|
+    new_array << person[:age] * 2
+  end
+  return new_array
+
+end
+p agedoubled([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
+
 # def agedoubled(array)
 #   index = 0
 #   new_array = []
@@ -572,6 +592,15 @@ p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 
 # 10. Start with an array of numbers and create a new array with each number converted into a string.
 #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+def toString(array)
+  new_array = []
+  array.each do |number|
+    new_array << number.to_s
+  end
+  return new_array
+end
+p toString([1,2,3])
 
 # def tostring(array)
 #   index = 0
