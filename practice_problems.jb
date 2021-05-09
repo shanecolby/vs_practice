@@ -1,5 +1,17 @@
 # print out everyother element in the array [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
+def everyOther(array)
+  new_array = []
+  index = 0
+  while index < array.length
+    new_array << array[index]
+    index += 2
+  end
+  return new_array
+
+end
+p everyOther([1,2,3,4,5,6,7,8,9])
+
 # def everyOther(array)
 #   index = 0
 #   while index < array.length
@@ -44,6 +56,15 @@
 # p everyOther([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 
 #  reverse the order of the array [1,2,3,4,5]
+
+def reverse(array)
+  new_array = []
+  array.each do |number|
+    new_array << number
+  end
+  return new_array.reverse
+end
+p reverse([1,2,3])
 
 
 
@@ -217,7 +238,16 @@ p product([1,2,3])
 # end
 # p sum([1,2,3,4])
 
-
+def sum(array)
+  sum = array[0]
+  index = 1
+  while index < array.length
+    sum = sum + array[index]
+    index += 1
+  end
+  return sum
+end
+p sum([1,2,3])
 
 
 
@@ -265,6 +295,16 @@ p product([1,2,3])
 # p flip({"a" => 1, "b" => 2, "c" => 3})
 
 # conver hash into an array {"chair" => 100, "book" => 14}
+
+def convert(hash)
+  new_array = []
+  hash.each do |name,price|
+    new_array << [name,price]
+  end
+  return new_array
+
+end
+p convert({"chair" => 100, "book" => 14})
 
 # def convert(hash)
 #   new_array = []
