@@ -458,16 +458,16 @@ p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 # end
 # p divide([2,4,6])
 
-# def divide(array)
-#   new_array = []
-#   index = 0
-#   while index < array.length
-#     new_array << array[index] / 2.0
-#     index += 1
-#   end
-#   return new_array
-# end
-# p divide([1,2,3])
+def divide(array)
+  new_array = []
+  index = 0
+  while index < array.length
+    new_array << array[index] / 2.0
+    index += 1
+  end
+  return new_array
+end
+p divide([1,2,3])
 
 
 # def divide(array)
