@@ -1,22 +1,15 @@
 #  1. Convert an array of arrays into a hash.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
 
-def convert(array)
-  index = 0
+def conver(array)
   hash = {}
-  while index < array.length
-    key = array[index][0]
-    value = array[index][1]
+  array.each do |key,value|
     hash[key] = value
-    index += 1
   end
   return hash
 
 end
-p convert([[1,3],[8,9],[2,16]])
-
-
-
+p conver([[1, 3], [8, 9], [2, 16]])
 
 
 # def convert(array)
@@ -40,7 +33,7 @@ p convert([[1,3],[8,9],[2,16]])
 
 def convert(array)
   index = 0
-  hash = {}
+  hash ={}
   while index < array.length
     hash[array[index][:id]] = array[index]
     index += 1
@@ -49,6 +42,7 @@ def convert(array)
 
 end
 p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
+
 
 
 # def convert(array)
@@ -68,21 +62,26 @@ p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
-def repeat(string)
+def convert(string)
+  letter_frequency = {}
   index = 0
-  hash = {}
   while index < string.length
     letter = string[index]
-    if hash[letter] == nil
-      hash[letter] = 0
+    if letter_frequency[letter] == nil
+      letter_frequency[letter] = 0
     end
-    hash[letter] += 1
+    letter_frequency[letter] += 1
     index += 1
   end
-  return hash
-  
+  return letter_frequency
+
+
 end
-p repeat("bookkeeper")
+p convert("acqcacqcccaqccacacaaaqcqcacqcqcacacqacqqqcacaccaccqcqcqcac")
+
+
+
+
 
 
 
@@ -105,13 +104,15 @@ p repeat("bookkeeper")
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 
 def convert(hash)
-  new_array = []
+  array = []
   hash.each do |name,price|
-    new_array << [price,name]
+    array << [name,price]
   end
-  return new_array
-end
+  return array
+
+  end
 p convert({"chair" => 100, "book" => 14})
+
 
 # def convert(hash)
 #   array = []
@@ -128,6 +129,19 @@ p convert({"chair" => 100, "book" => 14})
 #  5. Convert a hash into an array of hashes using the keys from each hash as the :id key in each of the array's hashes.
 #     For example, {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}} becomes [{id: 321, name: "Alice", age: 31}, {id: 322, name: "Maria", age: 27}].
 
+def convert(hash)
+  array = []
+  hash.each do |id, person|
+    person[:id] = id
+    array << person
+  end
+  return array
+
+end
+p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
+
+
+
 # def convert(hash)
 #   array = []
 #   hash.each do |id,person|
@@ -143,6 +157,22 @@ p convert({"chair" => 100, "book" => 14})
 
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
+
+def words(array)
+  word_frequency = {}
+  index = 0
+  while index < array.length
+    word = array[index]
+    if word_frequency[word] == nil
+      word_frequency[word] = 0
+    end
+    word_frequency[word] += 1
+    index += 1
+  end
+  return word_frequency
+
+end
+p words(["do", "or", "do", "not"])
 
 # def words(array)
 #   index = 0
@@ -164,6 +194,17 @@ p convert({"chair" => 100, "book" => 14})
 
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
+
+def convert(hash)
+  array = []
+  hash.each do |key,value|
+    array << key
+    array << value
+  end
+  return array
+
+end
+p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 # def convert(hash)
 #   array = []
