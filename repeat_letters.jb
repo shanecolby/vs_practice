@@ -38,20 +38,19 @@
 # return the greatest values from the array
 # array = [5,17,-4,20,12]
 
-def greatestValue(array)
+def greatest(array)
   index = 0
-  number = array[index]
+  highNumber = array[index]
   while index < array.length
-    if number < array[index]
-      number = array[index]
+    if highNumber < array[index]
+      highNumber = array[index]
     end
     index += 1
   end
-  return number
-
-
+  return highNumber
 end
-p greatestValue([5,17,-4,20,12])
+p greatest([5,17,-4,20,12])
+
 
 # def greatest(array)
 #   index = 0
@@ -136,11 +135,11 @@ p greatestValue([5,17,-4,20,12])
 # find the duplicate values
 # array = [5,2,9,7,2,6]
 
-def duplicate(array)
-  index = 0
+def double(array)
+  index = 0 
   doubleNumber = array[index]
   while index < array.length
-    sub_index = array[index] + 1
+    sub_index = index + 1
     while sub_index < array.length
       if array[index] == array[sub_index]
         doubleNumber = array[sub_index]
@@ -150,27 +149,10 @@ def duplicate(array)
     index += 1
   end
   return doubleNumber
-    
+
 
 end
-p duplicate([5,2,9,7,2,6])
-
-def duplicate(array)
-  index = 0
-  number = array[index]
-  while index < array.length
-    sub_index = array[index] + 1
-    while sub_index < array.length
-      if array[index] == array[sub_index]
-        number = array[sub_index]
-      end
-      sub_index += 1
-    end
-    index += 1
-  end
-  return number
-end
-p duplicate([1,2,3,4,5,3])
+p double([5,2,9,7,2,6])
 
 # def doublenumber(array)
 #   index = 0

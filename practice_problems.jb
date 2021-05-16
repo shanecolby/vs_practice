@@ -81,8 +81,10 @@ p reverse([1,2,3])
 
 # find the product of the array [1,2,3,4]
 
+
+
 def product(array)
-  index = 0
+  index = 0 
   product = array[index]
   while index < array.length
     product = product * array[index]
@@ -91,7 +93,7 @@ def product(array)
   return product
 
 end
-p product([1,2,3])
+p product([3,4,5])
 
 
 # def product(array)
@@ -136,6 +138,15 @@ p product([1,2,3])
 # p product([1,2,3,4])
 
 #double the elements in a given array [2,4,6,8,10]
+
+def double(array)
+  doubled = []
+  array.each do |number|
+    doubled << number * 2
+  end
+  return doubled
+end
+p double([2,3,4,5,5,6,7])
 
 
 
@@ -183,6 +194,18 @@ p product([1,2,3])
 
 # end
 # p lessThan10([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
+
+def less(array)
+  lessThan10 = []
+  array.each do |number|
+    if number < 10
+      lessThan10 << number
+    end
+  end
+  return lessThan10
+
+end
+p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
 # def greater_than_24(array)
 #   index = 0
@@ -266,7 +289,31 @@ p sum([1,2,3])
 # end
 # p sum([1,2,3])
 
+def sum(array)
+  index = 1
+  sum = array[0]
+  while index < array.length
+    sum += array[index]
+    index += 1
+  end
+  return sum
+
+end
+p sum([5,5,5,5])
+
+
+
 # flip the key and value of this hash {"a" => 1, "b" => 2, "c" => 3}
+
+def flip(hash)
+  new_hash = {}
+  hash. each do |key, value|
+    new_hash[value] = key
+  end
+  return new_hash
+
+end
+p flip({"a" => 1, "b" => 2, "c" => 3})
 
 # def flip(hash)
 #   flipped = {}
