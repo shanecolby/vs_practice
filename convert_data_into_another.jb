@@ -1,7 +1,7 @@
 #  1. Convert an array of arrays into a hash.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
 
-def conver(array)
+def convert(array)
   hash = {}
   array.each do |key,value|
     hash[key] = value
@@ -9,8 +9,7 @@ def conver(array)
   return hash
 
 end
-p conver([[1, 3], [8, 9], [2, 16]])
-
+p convert([[1, 3], [8, 9], [2, 16]])
 
 # def convert(array)
 #   index = 0
@@ -33,12 +32,13 @@ p conver([[1, 3], [8, 9], [2, 16]])
 
 def convert(array)
   index = 0
-  hash ={}
+  hash = {}
   while index < array.length
     hash[array[index][:id]] = array[index]
     index += 1
   end
   return hash
+
 
 end
 p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
@@ -62,7 +62,7 @@ p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
-def convert(string)
+def letterRepeat(string)
   letter_frequency = {}
   index = 0
   while index < string.length
@@ -75,11 +75,8 @@ def convert(string)
   end
   return letter_frequency
 
-
 end
-p convert("acqcacqcccaqccacacaaaqcqcacqcqcacacqacqqqcacaccaccqcqcqcac")
-
-
+p letterRepeat("asdasdasdasdasdasdaaasdssssdsdsdsdsdsasdsdaaasd")
 
 
 
@@ -103,16 +100,15 @@ p convert("acqcacqcccaqccacacaaaqcqcacqcqcacacqacqqqcacaccaccqcqcqcac")
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 
+
 def convert(hash)
-  array = []
+  new_arry = []
   hash.each do |name,price|
-    array << [name,price]
+    new_arry << [name,price]
   end
-  return array
-
-  end
+  return new_arry
+end
 p convert({"chair" => 100, "book" => 14})
-
 
 # def convert(hash)
 #   array = []
@@ -130,12 +126,12 @@ p convert({"chair" => 100, "book" => 14})
 #     For example, {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}} becomes [{id: 321, name: "Alice", age: 31}, {id: 322, name: "Maria", age: 27}].
 
 def convert(hash)
-  array = []
-  hash.each do |id, person|
+  new_array = []
+  hash.each do |id,person|
     person[:id] = id
-    array << person
+    new_array << person
   end
-  return array
+  return new_array
 
 end
 p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
@@ -158,21 +154,19 @@ p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
-def words(array)
-  word_frequency = {}
-  index = 0
-  while index < array.length
-    word = array[index]
-    if word_frequency[word] == nil
-      word_frequency[word] = 0
+def wordRepeat(array)
+  hash = {}
+  array.each do |word|
+    if hash[word] == nil
+      hash[word] = 0
     end
-    word_frequency[word] += 1
-    index += 1
+    hash[word] += 1
   end
-  return word_frequency
+  return hash
 
 end
-p words(["do", "or", "do", "not"])
+p wordRepeat(["do", "do","do", "or", "do", "not"])
+
 
 # def words(array)
 #   index = 0
@@ -196,15 +190,17 @@ p words(["do", "or", "do", "not"])
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
 def convert(hash)
-  array = []
+  new_array = []
   hash.each do |key,value|
-    array << key
-    array << value
+    new_array << key
+    new_array << value
   end
-  return array
+  return new_array[7]
 
 end
 p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
+
+
 
 # def convert(hash)
 #   array = []
@@ -222,6 +218,8 @@ p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
+
+
 
 # hash =  {"chair" => 75, "book" => 15}
 # array = [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}]
