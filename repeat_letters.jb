@@ -40,14 +40,14 @@
 
 def greatest(array)
   index = 0
-  highNumber = array[index]
+  hightestNumber = array[index]
   while index < array.length
-    if highNumber < array[index]
-      highNumber = array[index]
+    if hightestNumber < array[index]
+      hightestNumber = array[index]
     end
     index += 1
   end
-  return highNumber
+  return hightestNumber
 end
 p greatest([5,17,-4,20,12])
 
@@ -149,7 +149,6 @@ def double(array)
     index += 1
   end
   return doubleNumber
-
 
 end
 p double([5,2,9,7,2,6])
