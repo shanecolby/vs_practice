@@ -38,18 +38,7 @@
 # return the greatest values from the array
 # array = [5,17,-4,20,12]
 
-def greatest(array)
-  index = 0
-  hightestNumber = array[index]
-  while index < array.length
-    if hightestNumber < array[index]
-      hightestNumber = array[index]
-    end
-    index += 1
-  end
-  return hightestNumber
-end
-p greatest([5,17,-4,20,12])
+
 
 
 # def greatest(array)
@@ -134,24 +123,6 @@ p greatest([5,17,-4,20,12])
 
 # find the duplicate values
 # array = [5,2,9,7,2,6]
-
-def double(array)
-  index = 0 
-  doubleNumber = array[index]
-  while index < array.length
-    sub_index = index + 1
-    while sub_index < array.length
-      if array[index] == array[sub_index]
-        doubleNumber = array[sub_index]
-      end
-      sub_index += 1
-    end
-    index += 1
-  end
-  return doubleNumber
-
-end
-p double([5,2,9,7,2,6])
 
 # def doublenumber(array)
 #   index = 0

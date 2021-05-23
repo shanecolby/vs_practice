@@ -2,6 +2,7 @@
 
 
 
+
 # def everyOther(array)
 #   index = 0
 #   while index < array.length
@@ -65,17 +66,7 @@
 
 
 
-def product(array)
-  index = 0
-  product = array[index]
-  while index < array.length
-    product = product * array[index]
-    index += 1
-  end
-  return product
 
-end
-p product([3,4,5])
 
 
 # def product(array)
@@ -121,18 +112,6 @@ p product([3,4,5])
 
 #double the elements in a given array [2,4,6,8,10]
 
-def double(array)
-  arraytwo = []
-  array.each do |number|
-    arraytwo << number * 2
-  end
-  return arraytwo
-  
-end
-p double([2,3,4,5,5,6,7])
-
-
-
 
 
 
@@ -163,6 +142,8 @@ p double([2,3,4,5,5,6,7])
 
 # make new array of all numbers less than 10 [2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1]
 
+
+
 # def lessThan10(array)
 #   index = 0
 #   new_array = []
@@ -177,19 +158,6 @@ p double([2,3,4,5,5,6,7])
 
 # end
 # p lessThan10([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
-
-def less(array)
-  new_array = []
-  array.each do |number|
-    if number > 40
-      new_array << number
-    end
-  end
-  return new_array
- 
-
-end
-p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
 # def greater_than_24(array)
 #   index = 0
@@ -245,19 +213,6 @@ p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 # end
 # p sum([1,2,3,4])
 
-def sum(array)
-  sum = array[0]
-  index = 1
-  while index < array.length
-    sum = sum + array[index]
-    index += 1
-  end
-  return sum
-
-  
-end
-p sum([1,2,3])
-
 
 
 
@@ -275,32 +230,11 @@ p sum([1,2,3])
 # end
 # p sum([1,2,3])
 
-def sum(array)
-  sum = array[0]
-  index = 1
-  while index < array.length
-    sum = sum + array[index]
-    index += 1
-  end
-  return sum
- 
-
-end
-p sum([5,5,5,5])
-
-
 
 # flip the key and value of this hash {"a" => 1, "b" => 2, "c" => 3}
 
-def flip(hash)
-  new_hash = {}
-  hash.each do |key, value|
-    new_hash[value] = key
-  end
-  return new_hash
 
-end
-p flip({"a" => 1, "b" => 2, "c" => 3})
+
 
 # def flip(hash)
 #   flipped = {}
@@ -330,15 +264,9 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 
 # conver hash into an array {"chair" => 100, "book" => 14}
 
-def convert(hash)
-  array = []
-  hash.each do |name,price|
-    array << [name,price]
-  end
-  return array
- 
-end
-p convert({"chair" => 100, "book" => 14})
+
+
+
 
 # def convert(hash)
 #   new_array = []

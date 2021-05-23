@@ -1,19 +1,7 @@
 #  1. Convert an array of arrays into a hash.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
 
-def conver(array)
-  index = 0
-  hash = {}
-  while index < array.length
-    key = array[index][0]
-    value = array[index][1]
-    hash[key] = value
-    index += 1
-  end
-  return hash
 
-end
-p conver([[1, 3], [8, 9], [2, 16]])
 
 
 # def convert(array)
@@ -35,19 +23,6 @@ p conver([[1, 3], [8, 9], [2, 16]])
 #  2. Convert an array of hashes into a hash using the :id key from the array's hashes as the keys in the new hash.
 #     For example, [{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}] becomes {1 => {id: 1, color: "blue", price: 32}, 2 => {id: 2, color: "red", price: 12}}.
 
-def convert(array)
-  hash = {}
-  index = 0
-  while index < array.length
-    hash[array[index][:color]] = array[index]
-    index += 1
-  end
-  return hash
-
-
-end
-p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
-
 
 
 # def convert(array)
@@ -66,21 +41,6 @@ p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
 
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
-
-def letters(string)
-  letterRepeated = {}
-  index = 0
-  while index < string.length
-    letter = string[index]
-    if letterRepeated[letter] == nil
-      letterRepeated[letter] = 0
-    end
-    letterRepeated[letter] += 1
-    index += 1
-  end
-  return letterRepeated
-end
-p letters("asdjashdkjashdkjashdkjash")
 
 
 
@@ -103,15 +63,6 @@ p letters("asdjashdkjashdkjashdkjash")
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 
-def convert(hash)
-  array = []
-  hash.each do |name,price|
-    array << [name,price]
-  end
-  return array
-
-end
-p convert({"chair" => 100, "book" => 14})
 
 
 # def convert(hash)
@@ -129,15 +80,6 @@ p convert({"chair" => 100, "book" => 14})
 #  5. Convert a hash into an array of hashes using the keys from each hash as the :id key in each of the array's hashes.
 #     For example, {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}} becomes [{id: 321, name: "Alice", age: 31}, {id: 322, name: "Maria", age: 27}].
 
-def convert(hash)
-  array = []
-  hash.each do |id, person|
-    person[:id] = id
-    array << person
-  end
-  return array
-end
-p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
 
 
 
@@ -157,21 +99,7 @@ p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
-def convert(array)
-  wordRepeat = {}
-  index = 0
-  while index < array.length
-    word = array[index]
-    if wordRepeat[word] == nil
-      wordRepeat[word] = 0
-    end
-    wordRepeat[word] += 1
-    index += 1
-  end
-  return wordRepeat
 
-end
-p convert(["do", "or", "do", "not"])
 
 
 
@@ -196,16 +124,6 @@ p convert(["do", "or", "do", "not"])
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
-def convert(hash)
-  array = []
-  hash.each do |key,value|
-    array << key
-    array << value
-  end
-  return array
-end
-p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
-
 
 
 # def convert(hash)
@@ -228,23 +146,6 @@ p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 
 
-
-hash =  {"chair" => 75, "book" => 15}
-array = [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}]
-index = 0
-combo_hash = {}
-while index < array.length
-  item = array[index]
-  name = item[:name]
-  color = item[:color]
-  weight = item[:weight]
-  price = hash[name]
-  combo_hash[name] = {price: price, color: color, weight: weight}
-  index += 1
-end
-
-
-p combo_hash
 
 
 
@@ -291,16 +192,6 @@ p combo_hash
 
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
-
-def convert(hash)
-  hashTwo = {}
-  hash.each do |key,value|
-    hashTwo[value] = key
-  end
-  return hashTwo
-
-end
-p convert({"a" => 1, "b" => 2, "c" => 3})
 
 
 
