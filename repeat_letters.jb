@@ -38,6 +38,19 @@
 # return the greatest values from the array
 # array = [5,17,-4,20,12]
 
+def greatest(array)
+  index = 0
+  number = array[index]
+  while index < array.length
+    if number < array[index]
+      number = array[index]
+    end
+    index += 1
+  end
+  return number
+end
+p greatest([2,5,7,9])
+
 
 
 
@@ -235,11 +248,12 @@ def double(array)
       if array[index] == array[sub_index]
         double = array[sub_index]
       end
-      sub_index += 1
+      sub_index +=1
     end
     index += 1
   end
   return double
+  
 
 end
-p double([1,2,3,4,5,6,7,9,3])
+p double([1,2,5,4,5,6,7,9,3])

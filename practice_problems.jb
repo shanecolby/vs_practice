@@ -1,5 +1,15 @@
 # print out everyother element in the array [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
+def everyOther(array)
+  index = 0
+  new_array = []
+  while index < array.length
+    new_array << array[index]
+    index += 2
+  end
+  return new_array
+end
+p everyOther([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 
 
 
