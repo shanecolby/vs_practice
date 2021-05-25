@@ -3,7 +3,6 @@
 
 
 
-
 # x = 1
 # while x <= 10
 #   p x
@@ -53,6 +52,8 @@
 
 # 4. Write a while loop that prints the numbers 0 through 100, increasing by 5 each time.
 
+
+
 # x=0
 # while x <= 100
 #   p x
@@ -74,6 +75,8 @@
 
 
 # 5. Write a while loop that prints the number 9000 ten times.
+
+
 
 
 
@@ -106,6 +109,9 @@
 # 7. Write a while loop that prints the numbers 50 to 70.
 
 
+
+
+
 # x = 50
 # while x <= 70
 #   p x
@@ -129,6 +135,8 @@
 
 
 # 9. Write a while loop that asks the user to enter a word and will run forever until the user enters a word with more than 5 letters.
+
+
 
 
 # while true
@@ -327,6 +335,19 @@
 
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+def length(array)
+  index = 0
+  new_array = []
+  while index < array.length
+    new_array << array[index].length
+    index += 1
+  
+  end
+  return new_array
+
+end
+p length(["hello", "goodbye"])
 
 
 
