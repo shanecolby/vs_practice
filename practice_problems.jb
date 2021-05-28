@@ -8,6 +8,7 @@ def everyOther(array)
     index += 2
   end
   return new_array
+
 end
 p everyOther([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 
@@ -101,6 +102,7 @@ def product(array)
   end
   return product
 
+
 end
 p product([1,2,3])
 
@@ -147,11 +149,14 @@ p product([1,2,3])
 # p arrayDouble([5,10,15])
 
 def double(array)
-  new_array = []
-  array.each do |number|
-    new_array << number * 2
+  index = 0
+  new_array = [ ]
+  while index < array.length
+    new_array << array[index] * 2
+    index += 1
   end
   return new_array
+
 
 end
 p double([2,4,6,8])
@@ -194,11 +199,12 @@ p double([2,4,6,8])
 def less(array)
   new_array = []
   array.each do |number|
-    if number < 10
+    if number < 10 
       new_array << number
     end
   end
   return new_array
+
 
 
 end
@@ -259,8 +265,8 @@ p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 # p sum([1,2,3,4])
 
 def sum(array)
-  sum = array[0]
   index = 1
+  sum = array[0]
   while index < array.length
     sum = sum + array[index]
     index += 1
@@ -292,11 +298,11 @@ p sum([2,4,8])
 
 
 def flip(hash)
-  hash2 = {}
+  new_hash = {}
   hash.each do |key,value|
-    hash2[value] = key
+    new_hash[value] = key
   end
-  return hash2
+  return new_hash
 
 end
 p flip({"a" => 1, "b" => 2, "c" => 3})
@@ -332,11 +338,12 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 # conver hash into an array {"chair" => 100, "book" => 14}
 
 def convert(hash)
-  new_array = []
+  array = []
   hash.each do |name,price|
-    new_array << [name, price]
+    array << [name,price]
   end
-  return new_array
+  return array
+ 
 
 end
 p convert({"chair" => 100, "book" => 14})
