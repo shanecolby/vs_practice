@@ -171,14 +171,17 @@
 
 
 
-# def array(array)
-#   new_array = []
-#   array.each do |number|
-#     new_array << number * 3
-#   end
-#   return new_array
-# end
-# p array([1,2,3])
+
+
+def array(array)
+  new_array = []
+  array.each do |number|
+    new_array << number * 5
+  end
+  return new_array
+
+end
+p array([1,2,3])
 
 
 
@@ -208,6 +211,16 @@
 
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
+
+def upcase(array)
+  new_array = []
+  array.each do |word|
+    new_array << word.upcase
+  end
+  return new_array
+
+end
+p upcase(["hello", "goodbye"])
 
 
 
