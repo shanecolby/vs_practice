@@ -104,6 +104,7 @@ def product(array)
   return product
 
 
+
 end
 p product([1,2,3])
 
@@ -272,6 +273,8 @@ def sum(array)
     index += 1
   end
   return sum
+
+
 
 end
 p sum([2,4,8])
