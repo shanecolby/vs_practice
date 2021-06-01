@@ -23,14 +23,13 @@
 #     For example, [{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}] becomes {1 => {id: 1, color: "blue", price: 32}, 2 => {id: 2, color: "red", price: 12}}.
 
 def convert(array)
-  index = 0
   hash = {}
+  index = 0
   while index < array.length
     hash[array[index][:id]] = array[index]
     index += 1
   end
   return hash
-
 
 end
 p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
@@ -63,7 +62,7 @@ def convert(string)
       count[letter] = 0
     end
     count[letter] += 1
-    index+= 1
+    index += 1
   end
   return count
     
@@ -92,10 +91,11 @@ p convert("bookkeeper")
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 def convert(hash)
   array = []
-  hash.each do |key,value|
-    array << [key,value]
+  hash.each do |name,price|
+    array << [name,price]
   end
   return array
+
 end
 p convert({"chair" => 100, "book" => 14})
 
@@ -123,6 +123,7 @@ def convert(hash)
     array << person
   end
   return array
+
 
 end
 p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
@@ -178,6 +179,7 @@ def convert(hash)
     array << value
   end
   return array
+
 
  
 end
@@ -254,14 +256,14 @@ p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 
 
-# def convert(hash)
-#   new_hash = {}
-#   hash.each do |key,value|
-#     new_hash[value] = key
-#   end
-#   return new_hash
-# end
-# p convert({"a" => 1, "b" => 2, "c" => 3})
+def convert(hash)
+  new_hash ={}
+  hash.each do |key,value|
+    new_hash[value] = key
+  end
+  return new_hash
+end
+p convert({"a" => 1, "b" => 2, "c" => 3})
 
 
 
