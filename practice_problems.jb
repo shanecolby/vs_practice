@@ -9,7 +9,6 @@ def everyOther(array)
   end
   return new_array
 
-
 end
 p everyOther([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 
@@ -158,7 +157,6 @@ def double(array)
   return new_array
 
 
-
 end
 p double([2,4,6,8])
 
@@ -200,11 +198,12 @@ p double([2,4,6,8])
 def less(array)
   new_array = []
   array.each do |number|
-    if number > 33
+    if number < 50
       new_array << number
     end
   end
   return new_array
+
 
 
 
@@ -276,6 +275,7 @@ def sum(array)
 
 
 
+
 end
 p sum([2,4,8])
 
@@ -301,11 +301,11 @@ p sum([2,4,8])
 
 
 def flip(hash)
-  flipp = {}
+  new_hash = {}
   hash.each do |key,value|
-    flipp[value] = key
+    new_hash[value] = key
   end
-  return flipp
+  return new_hash
 
 
 end
@@ -347,8 +347,6 @@ def convert(hash)
     array << [name,price]
   end
   return array
-
- 
 
 end
 p convert({"chair" => 100, "book" => 14})
