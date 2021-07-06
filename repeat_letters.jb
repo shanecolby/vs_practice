@@ -40,17 +40,15 @@
 
 def greatest(array)
   index = 0
-  number = array[index]
+  greatestNumber = array[index]
   while index < array.length
-    if number < array[index]
-      number = array[index]
+    if greatestNumber < array[index]
+      greatestNumber = array[index]
     end
-    index += 1
+  index += 1
   end
-  return number
-
-
-  
+  return greatestNumber
+    
 
 end
 p greatest([2,105,7,99,89])
@@ -245,19 +243,18 @@ p greatest([2,105,7,99,89])
 
 def double(array)
   index = 0
-  duplicate = array[index]
+  duplicateNumber = array[index]
   while index < array.length
     sub_index = index + 1
     while sub_index < array.length
       if array[index] == array[sub_index]
-        duplicate = array[sub_index]
+        duplicateNumber = array[sub_index]
       end
       sub_index += 1
     end
-    index += 1
+  index += 1
   end
-  return duplicate
-
+return duplicateNumber
   
 
 end
