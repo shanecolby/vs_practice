@@ -174,12 +174,11 @@
 
 
 def array(array)
-  new_array = []
+  new = []
   array.each do |number|
-    new_array << number * 3
+    new << number * 3
   end
-  return new_array
-
+  return new
 
 end
 p array([1,2,3])
@@ -214,12 +213,12 @@ p array([1,2,3])
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
 def upcase(array)
-  new_array = []
+  new_array = [ ]
   array.each do |word|
     new_array << word.upcase
   end
   return new_array
- 
+
 end
 p upcase(["hello", "goodbye"])
 
@@ -273,11 +272,12 @@ p upcase(["hello", "goodbye"])
 
 
 def convert(array)
-  new_array = []
+  new=[]
   array.each do |person|
-    new_array << person[:name]
+    new << person[:name]
   end
-  return new_array
+  return new
+
 
 end
 p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
@@ -354,11 +354,12 @@ p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 
 
 def strings(array)
-  new_array = []
+  new_array=[]
   array.each do |word|
     new_array << word.length
   end
   return new_array
+
 end
 p strings(["hello", "goodbye"])
 
@@ -390,11 +391,12 @@ p strings(["hello", "goodbye"])
 
 
 def age(array)
-  new_array = []
+  new=[]
   array.each do |person|
-    new_array << person[:age]
+    new << person[:age]
   end
-  return new_array
+  return new
+ 
 
 
 end
@@ -537,11 +539,12 @@ p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 
 
 def convert(array)
-  new_array = []
+  new=[]
   array.each do |person|
-    new_array << person[:age] / 2
+    new << person[:age] * 2
   end
-  return new_array
+  return new
+  
 
 end
 p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
@@ -554,11 +557,12 @@ p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 
 
 def tostring(array)
-  new_array = []
+  new=[]
   array.each do |number|
-    new_array << number.to_s
+    new << number.to_s
   end
-  return new_array
+  return new
+  
 end
 p tostring([1,2,3])
 
