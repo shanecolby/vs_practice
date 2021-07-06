@@ -8,6 +8,7 @@ def everyOther(array)
     index += 2
   end
   return new_array
+  
 
 end
 p everyOther([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
@@ -97,11 +98,10 @@ def product(array)
   index = 0
   product = array[index]
   while index < array.length
-    product = product * array[index]
+    product *= array[index]
     index += 1
   end
   return product
-
 
 
 end
@@ -198,13 +198,11 @@ p double([2,4,6,8])
 def less(array)
   new_array = []
   array.each do |number|
-    if number < 50
+    if number < 10
       new_array << number
     end
   end
   return new_array
-
-
 
 
 end
@@ -265,16 +263,13 @@ p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 # p sum([1,2,3,4])
 
 def sum(array)
-  index = 1
-  sum = array[0]
+  index = 0
+  sum = 0
   while index < array.length
-    sum = sum + array[index]
-    index += 1
+    sum += array[index]
+  index += 1
   end
-  return sum
-
-
-
+return sum
 
 end
 p sum([2,4,8])
@@ -301,12 +296,11 @@ p sum([2,4,8])
 
 
 def flip(hash)
-  new_hash = {}
+  flipped = {}
   hash.each do |key,value|
-    new_hash[value] = key
+    flipped[value] = key
   end
-  return new_hash
-
+  return flipped
 
 end
 p flip({"a" => 1, "b" => 2, "c" => 3})
