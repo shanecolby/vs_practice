@@ -539,12 +539,11 @@ p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 
 
 def convert(array)
-  new=[]
-  array.each do |person|
-    new << person[:age] * 2
-  end
-  return new
-  
+ array_nre = []
+ array.each do |person|
+  array_nre << person[:age] * 2
+ end
+ return array_nre
 
 end
 p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
