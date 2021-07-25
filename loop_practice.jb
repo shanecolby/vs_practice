@@ -359,7 +359,6 @@ def strings(array)
     new_array << word.length
   end
   return new_array
-
 end
 p strings(["hello", "goodbye"])
 
