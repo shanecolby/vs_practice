@@ -22,19 +22,19 @@
 #  2. Convert an array of hashes into a hash using the :id key from the array's hashes as the keys in the new hash.
 #     For example, [{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}] becomes {1 => {id: 1, color: "blue", price: 32}, 2 => {id: 2, color: "red", price: 12}}.
 
-def convert(array)
-  hash = {}
-  index = 0
-  while index < array.length
-    hash[array[index][:id]] = array[index]
-  index += 1
-  end
-  return hash
+# def convert(array)
+#   hash = {}
+#   index = 0
+#   while index < array.length
+#     hash[array[index][:id]] = array[index]
+#   index += 1
+#   end
+#   return hash
 
 
 
-end
-p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
+# end
+# p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
 
 
 
@@ -55,23 +55,23 @@ p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
-def convert(string)
-  letterFrequency = {}
-  index = 0
-  while index < string.length
-    letter = string[index]
-    if letterFrequency[letter] == nil
-      letterFrequency[letter] = 0
-    end
-    letterFrequency[letter] += 1
-    index += 1
-  end
-  return letterFrequency
+# def convert(string)
+#   letterFrequency = {}
+#   index = 0
+#   while index < string.length
+#     letter = string[index]
+#     if letterFrequency[letter] == nil
+#       letterFrequency[letter] = 0
+#     end
+#     letterFrequency[letter] += 1
+#     index += 1
+#   end
+#   return letterFrequency
   
 
  
-end
-p convert("bookkeeper")
+# end
+# p convert("bookkeeper")
 
 
 
@@ -92,16 +92,17 @@ p convert("bookkeeper")
 
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
-def convert(hash)
-  array = []
-  hash.each do |name,price|
-    array << [name,price]
-  end
-  return array
+
+# def convert(hash)
+#   array = []
+#   hash.each do |name,price|
+#     array << [name,price]
+#   end
+#   return array
 
 
-end
-p convert({"chair" => 100, "book" => 14})
+# end
+# p convert({"chair" => 100, "book" => 14})
 
 
 
@@ -122,6 +123,10 @@ p convert({"chair" => 100, "book" => 14})
 
 def convert(hash)
   array = []
+  hash.each do |id,person|
+    person[:id] = id
+    array << person
+  end
   
 
 
@@ -173,6 +178,12 @@ p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
 def convert(hash)
+  array = []
+  hash.each do |key,value|
+    array << key
+    array << value
+  end
+  return array
 
 
  
@@ -251,6 +262,11 @@ p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 
 def convert(hash)
+  hashNew = {}
+  hash.each do |key,value|
+    hashNew[value] = key
+  end
+  return hashNew
 
 end
 p convert({"a" => 1, "b" => 2, "c" => 3})
