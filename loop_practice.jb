@@ -274,6 +274,7 @@ def convert(array)
   new = []
   array.each do |string|
     new << string[:name]
+    new << string[:age] * 2
   end
   return new
 
