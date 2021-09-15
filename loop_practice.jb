@@ -179,9 +179,8 @@ def array(array)
     new << number * 3
   end
   return new
-
 end
-p array([1,2,3])
+p array([10,20,30])
 
 
 
@@ -213,7 +212,7 @@ p array([1,2,3])
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
 def upcase(array)
-  new_array = [ ]
+  new_array=[]
   array.each do |word|
     new_array << word.upcase
   end
@@ -223,7 +222,7 @@ end
 p upcase(["hello", "goodbye"])
 
 
-
+ 
 
 
 
@@ -272,9 +271,9 @@ p upcase(["hello", "goodbye"])
 
 
 def convert(array)
-  new=[]
-  array.each do |person|
-    new << person[:name]
+  new = []
+  array.each do |string|
+    new << string[:name]
   end
   return new
 
@@ -354,7 +353,7 @@ p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 
 
 def strings(array)
-  new_array=[]
+  new_array = []
   array.each do |word|
     new_array << word.length
   end
@@ -390,16 +389,15 @@ p strings(["hello", "goodbye"])
 
 
 def age(array)
-  new=[]
+  new = []
   array.each do |person|
     new << person[:age]
   end
   return new
- 
 
 
 end
-p age([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
+p age([{name: "Alice", age: 29}, {name: "Blane", age: 16}])
 
 
 
