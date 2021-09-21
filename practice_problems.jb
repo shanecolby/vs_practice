@@ -84,17 +84,16 @@
 # p product([5,5,5])
 
 def product(array)
-  index = 1
+  index = 0
   product = array[index]
-    while index < array.length
-      product *= array[index]
-    index += 1
+  while index < array.length
+    product *= array[index]
+  index += 1
   end
   return product
 
-
 end
-p product([2,2,3])
+p product([1,2,3])
 
 
 
@@ -139,11 +138,11 @@ p product([2,2,3])
 # p arrayDouble([5,10,15])
 
 def double(array)
-  new = []
-  array.each do |number|
-    new << number * 2
-  end
-  return new
+ new = []
+ array.each do  |number|
+  new << number * 2
+ end
+ return new
 
 
 end
@@ -192,7 +191,6 @@ def less(array)
     end
   end
   return new_array
-
 
 end
 p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
@@ -251,17 +249,6 @@ p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 # end
 # p sum([1,2,3,4])
 
-def sum(array)
-  index = 0
-  sum = 0
-  while index < array.length
-    sum += array[index]
-  index += 1
-  end
-return sum
-
-end
-p sum([2,4,8])
 
 
 
@@ -285,11 +272,11 @@ p sum([2,4,8])
 
 
 def flip(hash)
-  flipped = {}
+  flip = {}
   hash.each do |key,value|
-    flipped[value] = key
+    flip[value] = key
   end
-  return flipped
+  return flip
 
 end
 p flip({"a" => 1, "b" => 2, "c" => 3})
@@ -326,8 +313,8 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 
 def convert(hash)
   array = []
-  hash.each do |name,price|
-    array << [name,price]
+  hash.each do |item,price|
+    array << [item,price]
   end
   return array
 
