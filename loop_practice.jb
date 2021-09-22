@@ -272,9 +272,8 @@ p upcase(["hello", "goodbye"])
 
 def convert(array)
   new = []
-  array.each do |string|
-    new << string[:name]
-    new << string[:age] * 2
+  array.each do  |person|
+    new << person[:age]
   end
   return new
 
