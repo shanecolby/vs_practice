@@ -87,10 +87,11 @@ def product(array)
   index = 0
   product = array[index]
   while index < array.length
-    product *= array[index]
+    product = product * array[index]
   index += 1
   end
-  return product
+return product
+
 
 end
 p product([1,2,3])
@@ -138,11 +139,12 @@ p product([1,2,3])
 # p arrayDouble([5,10,15])
 
 def double(array)
- new = []
- array.each do  |number|
-  new << number * 2
- end
- return new
+  new_array = []
+  array.each do |number|
+    new_array << number * 2
+  end
+  return new_array
+
 
 
 end
@@ -186,11 +188,12 @@ p double([2,4,6,8])
 def less(array)
   new_array = []
   array.each do |number|
-    if number < 5
+    if number < 10
       new_array << number
     end
   end
   return new_array
+
 
 end
 p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
@@ -272,11 +275,12 @@ p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
 
 def flip(hash)
-  flip = {}
+  new_hash = {}
   hash.each do |key,value|
-    flip[value] = key
+    new_hash[value] = key
   end
-  return flip
+  return new_hash
+
 
 end
 p flip({"a" => 1, "b" => 2, "c" => 3})
@@ -317,6 +321,7 @@ def convert(hash)
     array << [item,price]
   end
   return array
+
 
 end
 p convert({"chair" => 100, "book" => 14})
