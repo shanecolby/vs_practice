@@ -123,10 +123,12 @@
 
 def convert(hash)
   array = []
-  hash.each do |id,person|
+  hash.each do |id, person|
     person[:id] = id
     array << person
   end
+  return array
+
   
 
 
@@ -231,6 +233,7 @@ p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 
 
+
 # books = [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}]
 
 
@@ -262,12 +265,12 @@ p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 
 def convert(hash)
-  hashNew = {}
+  new_hash = {}
   hash.each do |key,value|
-    hashNew[value] = key
+    new_hash[value] = key
   end
-  return hashNew
-
+  return new_hash
+ 
 end
 p convert({"a" => 1, "b" => 2, "c" => 3})
 
