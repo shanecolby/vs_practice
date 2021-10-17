@@ -40,14 +40,14 @@
 
 def greatest(array) 
   index = 0
-  greatestNumber = array[index]
+  greatest = array[index]
   while index < array.length
-    if greatestNumber < array[index]
-      greatestNumber = array[index]
+    if greatest < array[index]
+      greatest = array[index]
     end
   index += 1
   end
-  return greatestNumber
+  return greatest
 
 end
 p greatest([1,2,3,4,54,56,67,23,123,43,1000,564,6,7,8,213,345,899,900])
@@ -154,20 +154,20 @@ p greatest([1,2,3,4,54,56,67,23,123,43,1000,564,6,7,8,213,345,899,900])
 # array = [5,2,9,7,2,6]
 
 def doublenumber(array)
-index = 0
-duplicate = array[index]
-while index < array.length
-  sub_index = array[index] + 1
-  while sub_index < array.length
-    if array[index] == array[sub_index]
-      duplicate = array[sub_index]
+  index = 0
+  doubleNum = array[index]
+  while index < array.length
+    sub_index = array[index] + 1
+    while sub_index < array.length
+      if array[index] == array[sub_index]
+        doubleNum = array[sub_index]
+      end
+    sub_index += 1
     end
-    sub_index +=1 
-  end
   index += 1
-end
-return duplicate
-  
+  end
+  return doubleNum
+
 
 end
 p doublenumber([5,2,9,7,2,6])
