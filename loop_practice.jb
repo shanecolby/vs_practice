@@ -174,11 +174,12 @@
 
 
 def array(array)
-  new_array = []
+  new_array  = []
   array.each do |number|
-    new_array << number * 3
+    new_array << number * 2
   end
   return new_array
+
 end
 p array([10,20,30])
 
@@ -271,11 +272,12 @@ p upcase(["hello", "goodbye"])
 
 
 def convert(array)
-  new_array = []
-  array.each do |person,age|
-    new_array << person[:name]
+  arrayNew = []
+  array.each do |person|
+    arrayNew << person[:age]
   end
-  return new_array
+  return arrayNew
+
 
 end
 p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
@@ -352,11 +354,11 @@ p convert([{name: "Alice", age: 27}, {name: "Blane", age: 16}])
 
 
 def strings(array)
-  new_array = []
+  newA = []
   array.each do |word|
-    new_array << word.length
+    newA << word.length
   end
-  return new_array
+  return newA
 
 end
 p strings(["hello", "goodbye"])
@@ -390,7 +392,7 @@ p strings(["hello", "goodbye"])
 
 def age(array)
   new_array = []
-  array.each do |person,age|
+  array.each do |person|
     new_array << person[:age]
   end
   return new_array
@@ -537,7 +539,7 @@ p age([{name: "Alice", age: 29}, {name: "Blane", age: 16}])
 
 def convert(array)
   new_array = []
-  array.each do |person,age|
+  array.each do |person|
     new_array << person[:age] * 2
   end
   return new_array
@@ -559,7 +561,6 @@ def tostring(array)
     new_array << number.to_s
   end
   return new_array
-
   
 end
 p tostring([1,2,3])
