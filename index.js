@@ -357,5 +357,6 @@ function LongestWordLength(str) {
   console.log(Math.max(res, curr_len));
 }
 
-var s = "I am an intern at geeksforgeeks";
-document.write(LongestWordLength(s));
+//   var s = "I am an intern at geeksforgeeks";
+//   document.write(LongestWordLength(s));
+LongestWordLength("I am an intern at geeksforgeeks")
