@@ -1,17 +1,17 @@
-# word = "mississippi"
-# letter_frequency = {}
-# index = 0
+word = "mississippi"
+letter_frequency = {}
+index = 0
 
 
-# while index < word.length
-#   letter = word[index]
-#   if letter_frequency[letter] == nil
-#     letter_frequency[letter] = 0
-#   end
-#   letter_frequency[letter] += 1
-#   index += 1
-# end
-# p letter_frequency
+while index < word.length
+  letter = word[index]
+  if letter_frequency[letter] == nil
+    letter_frequency[letter] = 0
+  end
+  letter_frequency[letter] += 1
+  index += 1
+end
+p letter_frequency
 
 
 

@@ -3,19 +3,19 @@
 
 
 
-# def convert(array)
-#   index = 0
-#   hash = {}
-#   while index < array.length
-#     key = array[index][0]
-#     value = array[index][1]
-#     hash[key] = value
-#     index += 1
-#   end
-#   return hash
+def convert(array)
+  index = 0
+  hash = {}
+  while index < array.length
+    key = array[index][0]
+    value = array[index][1]
+    hash[key] = value
+    index += 1
+  end
+  return hash
 
-# end
-# p convert([[1, 3], [8, 9], [2, 16]])
+end
+p convert([[1, 3], [8, 9], [2, 16]])
 
 
 
@@ -38,17 +38,17 @@
 
 
 
-# def convert(array)
-#   index = 0
-#   hash = {}
-#   while index < array.length
-#     hash[array[index][:id]] = array[index]
-#     index += 1
-#   end
-#   return hash
+def convert(array)
+  index = 0
+  hash = {}
+  while index < array.length
+    hash[array[index][:id]] = array[index]
+    index += 1
+  end
+  return hash
 
-# end
-# p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
+end
+p convert([{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}])
 
 
 
@@ -75,18 +75,18 @@
 
 
 
-# word = "bookkeeper"
-# letter_frequency = {}
-# index = 0
-# while index < word.length
-#   letter = word[index]
-#   if letter_frequency[letter] == nil
-#     letter_frequency[letter] = 0
-#   end
-#   letter_frequency[letter] += 1
-#   index += 1
-# end
-# p letter_frequency
+word = "bookkeeper"
+letter_frequency = {}
+index = 0
+while index < word.length
+  letter = word[index]
+  if letter_frequency[letter] == nil
+    letter_frequency[letter] = 0
+  end
+  letter_frequency[letter] += 1
+  index += 1
+end
+p letter_frequency
 
 
 
@@ -106,15 +106,15 @@
 
 
 
-# def convert(hash)
-#   array = []
-#   hash.each do |name,price|
-#     array << [name,price]
-#   end
-#   return array
+def convert(hash)
+  array = []
+  hash.each do |name,price|
+    array << [name,price]
+  end
+  return array
 
-# end
-# p convert({"chair" => 100, "book" => 14})
+end
+p convert({"chair" => 100, "book" => 14})
 
 
 
@@ -129,7 +129,6 @@ def convert(hash)
   end
   return array
 
-  
 
 
 end
@@ -158,21 +157,21 @@ p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
 
 
 
-# def words(array)
-#   index = 0
-#   hash = {}
-#   while index < array.length
-#     word = array[index]
-#     if hash[word] == nil
-#       hash[word] = 0
-#     end
-#     hash[word] += 1
-#     index += 1
-#   end
-#   return hash
+def words(array)
+  index = 0
+  hash = {}
+  while index < array.length
+    word = array[index]
+    if hash[word] == nil
+      hash[word] = 0
+    end
+    hash[word] += 1
+    index += 1
+  end
+  return hash
 
-# end
-# p words(["do", "or", "do", "not"])
+end
+p words(["do", "or", "do", "not"])
 
 
 
@@ -180,15 +179,13 @@ p convert({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
 def convert(hash)
-  array = []
+  new_array = []
   hash.each do |key,value|
-    array << key
-    array << value
+    new_array << key
+    new_array << value
   end
-  return array
+  return new_array
 
-
- 
 end
 p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
@@ -241,19 +238,19 @@ p convert({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 
 
-# hash = {}
-# index = 0
-# while index < books.length
-#   book = books[index]
-#   author = book[:author]
-#   title = book[:title]
-#   if hash[author] == nil
-#     hash[author] = []
-#   end
-#   hash[author] << title
-#   index += 1
-# end
-# p hash
+hash = {}
+index = 0
+while index < books.length
+  book = books[index]
+  author = book[:author]
+  title = book[:title]
+  if hash[author] == nil
+    hash[author] = []
+  end
+  hash[author] << title
+  index += 1
+end
+p hash
 
 
 
@@ -270,7 +267,7 @@ def convert(hash)
     new_hash[value] = key
   end
   return new_hash
- 
+
 end
 p convert({"a" => 1, "b" => 2, "c" => 3})
 

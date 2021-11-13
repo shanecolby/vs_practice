@@ -56,21 +56,21 @@ p everyOther([1,2,3,4,45,5,6,7,8])
 # end
 # p everyOther([1,2,3,4,5,6,7,8,9,10,11,12,13,14])
 
-#  reverse the order of the array [1,2,3,4,5]
+ reverse the order of the array [1,2,3,4,5]
 
 
 
 
-# def reverse(array)
-#   index = 0
-#   while index < array.length
-#     array[index]
-#     index += 1
-#   end
-#   return array.reverse
+def reverse(array)
+  index = 0
+  while index < array.length
+    array[index]
+    index += 1
+  end
+  return array.reverse
 
-# end
-# p reverse([1,2,3,4,5])
+end
+p reverse([1,2,3,4,5])
 
 # find the product of the array [1,2,3,4]
 
@@ -247,16 +247,16 @@ p less([2,10,20,12,3,5,54,23,65,2,45,32,12,43,23,1])
 
 
  
-# def sum(array)
-#   index = 1
-#   sum = array[0]
-#   while index < array.length
-#     sum += array[index]
-#     index += 1
-#   end
-#   return sum
-# end
-# p sum([1,2,3,4])
+def sum(array)
+  index = 1
+  sum = array[0]
+  while index < array.length
+    sum += array[index]
+    index += 1
+  end
+  return sum
+end
+p sum([1,2,3,4])
 
 
 
@@ -320,6 +320,8 @@ p flip({"a" => 1, "b" => 2, "c" => 3})
 # end
 # p flip({"a" => 1, "b" => 2, "c" => 3})
 
+
+
 # conver hash into an array {"chair" => 100, "book" => 14}
 
 def convert(hash)
@@ -337,14 +339,14 @@ p convert({"chair" => 100, "book" => 14})
 
 
 
-# def convert(hash)
-#   new_array = []
-#   hash.each do |name,price|
-#     new_array << [name,price]
-#   end
-#   return new_array
-# end
-# p convert({"chair" => 100, "book" => 14})
+def convert(hash)
+  new_array = []
+  hash.each do |name,price|
+    new_array << [name,price]
+  end
+  return new_array
+end
+p convert({"chair" => 100, "book" => 14})
 
 # def hashToArray(hash)
 #   array = []
