@@ -96,6 +96,17 @@ removeDuplicate([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]);
 //  [1, 3, 5, 6, 7, 8]
 
 
+function removeDuplicate(array) {
+  const noRepeats = []
+  array.forEach((number) => {
+    if (!noRepeats.includes(number)) {
+      noRepeats.push(number)
+    }
+  })
+  console.log(noRepeats)
+}
+removeDuplicate([1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 7, 7, 8, 9])
+
 // Reverse String
 
 function reverse(str) {
@@ -320,3 +331,31 @@ var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
 function reverseBySeparator(string, separator) {
   return string.split(separator).reverse().join(separator);
 }
+
+
+// finds largest number of charters in the longest word of a sentence
+function LongestWordLength(str) {
+
+  let res = 0,
+    curr_len = 0;
+
+  for (var i = 0; i < str.length; i++) {
+
+    // If current character is not
+    // end of current word.
+    if (str[i] !== " ") curr_len++;
+    // If end of word is found
+    else {
+      res = Math.max(res, curr_len);
+      curr_len = 0;
+    }
+  }
+
+  // We do max one more time to consider
+  // last word as there won't be any space
+  // after last word.
+  console.log(Math.max(res, curr_len));
+}
+
+var s = "I am an intern at geeksforgeeks";
+document.write(LongestWordLength(s));
