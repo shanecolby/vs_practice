@@ -260,6 +260,18 @@ sum_array([[3, 2], [1], [4, 12]]);
 
 
 
+function product(array) {
+  product = 1
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      product *= array[i][j]
+    }
+  }
+  console.log(product)
+}
+product([[1, 2, 3], [1], [2, 1]])
+
+
 
 
 
@@ -360,3 +372,17 @@ function LongestWordLength(str) {
 //   var s = "I am an intern at geeksforgeeks";
 //   document.write(LongestWordLength(s));
 LongestWordLength("I am an intern at geeksforgeeks")
+
+
+// Average of array and sum
+function average(array) {
+  sum = 0
+  for (let number of array) {
+    sum += number
+  }
+  average = sum / array.length
+
+  console.log(sum)
+  console.log(average)
+}
+average([1, 2, 3, 4, 5, 6])
