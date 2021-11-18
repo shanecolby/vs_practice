@@ -386,3 +386,82 @@ function average(array) {
   console.log(average)
 }
 average([1, 2, 3, 4, 5, 6])
+
+
+
+
+
+// INTERVIEW QUESTION "REVERSE" string and add / remover / uppercase / lowercase
+
+
+
+
+function reverseString(string) {
+  let revStr = string.split(' ').reverse().join(' ')
+  let removeLast = revStr.substring(1)
+  let lowerCase = removeLast.substring().toLowerCase()
+  let capFirst = lowerCase[0].toUpperCase() + lowerCase.slice(1)
+  let addChar = capFirst.substring() + "!"
+  let array = addChar.split(' ')
+  let removeIndex2 = array.splice(0, 3, "right")
+
+
+
+  console.log(revStr)
+  console.log(removeLast)
+  console.log(lowerCase)
+  console.log(capFirst)
+  console.log(addChar)
+  console.log(removeIndex2)
+}
+reverseString("It is bright today")
+
+
+
+
+
+
+
+
+// 5 ways to reverse a string
+
+
+const a = "Hello, my name is Shane"
+
+function reverse(str) {
+  console.log(str.split(" ").reverse().join(" "))
+}
+reverse(a)
+
+function reverse2(str) {
+  console.log([...str].reverse().join(""))
+}
+reverse2(a)
+
+function reverse3(str) {
+  let reversedString = ""
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedString += str[i]
+  }
+  console.log(reversedString)
+
+}
+reverse3(a)
+
+
+function reverse4(str) {
+  let rev4 = ""
+  for (let char of str) {
+    rev4 = char + rev4
+  }
+  console.log(rev4)
+}
+reverse4(a)
+
+
+
+
+function reverse5(str) {
+  console.log([...str].reduce((acc, char) => char + acc, ""))
+}
+reverse5(a)
