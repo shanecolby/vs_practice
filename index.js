@@ -400,19 +400,19 @@ function reverseString(string) {
   let revStr = string.split(' ').reverse().join(' ')
   let removeLast = revStr.substring(1)
   let lowerCase = removeLast.substring().toLowerCase()
-  let capFirst = lowerCase[0].toUpperCase() + lowerCase.slice(1)
-  let addChar = capFirst.substring() + "!"
-  let array = addChar.split(' ')
-  let removeIndex2 = array.splice(0, 3, "right")
+  // let capFirst = lowerCase[0].toUpperCase() + lowerCase.slice(1)
+  // let addChar = capFirst.substring() + "!"
+  // let array = addChar.split(' ')
+  // let removeIndex2 = array.splice(0, 3, "right")
 
 
 
   console.log(revStr)
   console.log(removeLast)
   console.log(lowerCase)
-  console.log(capFirst)
-  console.log(addChar)
-  console.log(removeIndex2)
+  // console.log(capFirst)
+  // console.log(addChar)
+  // console.log(removeIndex2)
 }
 reverseString("It is bright today")
 
