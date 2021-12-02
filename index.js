@@ -449,14 +449,6 @@ function reverse3(str) {
 reverse3(a)
 
 
-function reverse4(str) {
-  let rev4 = ""
-  for (let char of str) {
-    rev4 = char + rev4
-  }
-  console.log(rev4)
-}
-reverse4(a)
 
 
 
@@ -465,3 +457,41 @@ function reverse5(str) {
   console.log([...str].reduce((acc, char) => char + acc, ""))
 }
 reverse5(a)
+
+
+function reverse(str) {
+  console.log(str.split('').reverse().join(''))
+}
+reverse("i love you")
+
+
+
+
+
+function reverse(str) {
+  console.log(str.split('').reverse().join(''))
+}
+reverse("Hello how are you")
+
+function reverse(str) {
+  console.log([...str].reverse().join(''))
+}
+reverse("This is number 2")
+
+function reverse(str) {
+  let final = ''
+  for (let letter of str) {
+    final = letter + str
+  }
+  console.log(final)
+}
+reverse("This is number three")
+
+function reverse() {
+  let final = ''
+  for (let i = str.length - 1; i >= 0; i--) {
+    final = str[i]
+  }
+  console.log(final)
+}
+reverse("This is number 4")
