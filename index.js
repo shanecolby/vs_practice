@@ -468,30 +468,66 @@ reverse("i love you")
 
 
 
-function reverse(str) {
-  console.log(str.split('').reverse().join(''))
-}
-reverse("Hello how are you")
+// function reverse(str) {
+//   console.log(str.split('').reverse().join(''))
+// }
+// reverse("Hello how are you")
 
-function reverse(str) {
-  console.log([...str].reverse().join(''))
-}
-reverse("This is number 2")
+// function reverse(str) {
+//   console.log([...str].reverse().join(''))
+// }
+// reverse("This is number 2")
 
-function reverse(str) {
-  let final = ''
-  for (let letter of str) {
-    final = letter + str
+// function reverse(str) {
+//   let final = ''
+//   for (let letter of str) {
+//     final = letter + str
+//   }
+//   console.log(final)
+// }
+// reverse("This is number three")
+
+// function reverse() {
+//   let final = ''
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     final = str[i]
+//   }
+//   console.log(final)
+// }
+// reverse("This is number 4")
+
+function reverse(string) {
+  console.log(string.split('').reverse().join(''))
+
+}
+reverse("I am number one")
+
+
+function reverse(string) {
+  console.log([...string].reverse().join(''))
+
+}
+reverse("I am number two")
+
+
+
+function reverse(string) {
+  let final = ""
+  for (let i = string.lenght - 1; i >= 0; i--) {
+    final += string[i]
   }
   console.log(final)
-}
-reverse("This is number three")
 
-function reverse() {
+}
+reverse("I am number three")
+
+
+function reverse(string) {
   let final = ''
-  for (let i = str.length - 1; i >= 0; i--) {
-    final = str[i]
+  for (let letter of string) {
+    final = letter + final
   }
   console.log(final)
+
 }
-reverse("This is number 4")
+reverse("I am number four")
